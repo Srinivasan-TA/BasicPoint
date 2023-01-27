@@ -1,6 +1,10 @@
 package org.example;
 
+import java.util.Scanner;
+import java.util.logging.Logger;
+
 class Point implements Cloneable{
+    Logger e = Logger.getLogger("com.api.jar");
     private int x;
     private int y;
 
@@ -10,8 +14,8 @@ class Point implements Cloneable{
     }
 
     void display(){
-        logger.log("value of x " + x);
-        logger.log("value of y " + y);
+        e.info("value of x " + x);
+        e.info("value of y " + y);
     }
 
     public boolean equals(Object obj) {
@@ -31,9 +35,15 @@ class Point implements Cloneable{
 
 class Main {
     public static void main(String[] args) {
-        Point p1 = new Point(3, 36);
+        Scanner se = new Scanner(System.in);
+        Logger e = Logger.getLogger("com.api.jar");
+        e.info("enter the x co-ordinate:");
+        int x = se.nextInt();
+        e.info("enter the y co-ordinate:");
+        int y = se.nextInt();
+        Point p1 = new Point(x,y);
         Point p2 = p1.clone();
-        logger.log(p1.equals(p2));
+        e.info(p1.equals(p2));
         p2.display();
     }
 }
