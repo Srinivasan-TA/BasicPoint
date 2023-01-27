@@ -29,10 +29,9 @@ class Point implements Cloneable{
         }
     }
 
-
-//    public Point clone() {
-//        return new Point(x, y);
-//    }
+    public Point clone() {
+        return new Point(x, y);
+    }
 }
 
 class Main {
