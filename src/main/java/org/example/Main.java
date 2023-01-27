@@ -14,10 +14,8 @@ class Point implements Cloneable{
     }
 
     void display(){
-        String q = ("value of x " + x);
-        String p = ("value of y " + y);
-        e.info(q);
-        e.info(p);
+        e.info("value of x " + x);
+        e.info("value of y " + y);
     }
 
     public boolean equals(Object obj) {
@@ -28,6 +26,7 @@ class Point implements Cloneable{
             return false;
         }
     }
+
 
     public Point clone() {
         return new Point(x, y);
