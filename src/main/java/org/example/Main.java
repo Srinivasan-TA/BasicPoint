@@ -19,7 +19,7 @@ class Point implements Cloneable{
         e.info("value of y " + y);
     }
 
-    public boolean equals(Object obj) {
+    public boolean equalling(Object obj) {
         if (obj instanceof Point) {
             return x ==y;
         } else {
@@ -45,7 +45,7 @@ class Main {
         int y = se.nextInt();
         Point p1 = new Point(x,y);
         Point p2 = p1.clone();
-        e.info(String.valueOf(p1.equals(p2)));
+        e.info(String.valueOf(p1.equalling(p2)));
         p2.display();
     }
 }
