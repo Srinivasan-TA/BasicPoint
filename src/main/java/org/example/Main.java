@@ -32,7 +32,6 @@ class Point implements Cloneable{
         return new Point(x, y);
     }
 }
-
 class Main {
     public static void main(String[] args) {
         Scanner se = new Scanner(System.in);
