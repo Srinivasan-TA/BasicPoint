@@ -5,8 +5,8 @@ import java.util.logging.Logger;
 
 class Point implements Cloneable{
     Logger e = Logger.getLogger("com.api.jar");
-     int x;
-     int y;
+    private int x;
+    private int y;
 
     public Point(int x, int y) {
         this.x = x;
