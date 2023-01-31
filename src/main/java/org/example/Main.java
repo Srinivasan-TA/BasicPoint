@@ -1,5 +1,6 @@
 package org.example;
 
+import java.awt.datatransfer.StringSelection;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -20,7 +21,6 @@ class Point implements Cloneable{
 
     public boolean equals(Object obj) {
         if (obj instanceof Point) {
-            Point other = (Point) obj;
             return x ==y;
         } else {
             return false;
@@ -37,13 +37,15 @@ class Main {
     public static void main(String[] args) {
         Scanner se = new Scanner(System.in);
         Logger e = Logger.getLogger("com.api.jar");
-        e.info("enter the x co-ordinate:");
+        String s="enter the x co-ordinate:";
+        e.info(s);
         int x = se.nextInt();
-        e.info("enter the y co-ordinate:");
+        String r="enter the y co-ordinate:";
+        e.info(r);
         int y = se.nextInt();
         Point p1 = new Point(x,y);
         Point p2 = p1.clone();
-        e.info(p1.equals(p2));
+        e.info(String.valueOf(p1.equals(p2)));
         p2.display();
     }
 }
