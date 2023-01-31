@@ -27,9 +27,9 @@ class Point implements Cloneable{
         }
     }
 
-
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public Point clone() throws CloneNotSupportedException {
+        super.clone();
+        return new Point(x, y);
     }
 }
 class Main {
@@ -43,7 +43,7 @@ class Main {
         e.info(r);
         int y = se.nextInt();
         Point p1 = new Point(x,y);
-        Point p2 = (Point)p1.clone();
+        Point p2 = p1.clone();
         String a =String.valueOf(p1.equalling(p2));
         e.info(a);
         p2.display();
