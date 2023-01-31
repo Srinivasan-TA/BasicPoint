@@ -1,6 +1,5 @@
 package org.example;
 
-import java.awt.datatransfer.StringSelection;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -15,8 +14,10 @@ class Point implements Cloneable{
     }
 
     void display(){
-        e.info("value of x " + x);
-        e.info("value of y " + y);
+        String s ="value of x " + x;
+        e.info(s);
+        String r ="value of y " + y;
+        e.info(r);
     }
 
     public boolean equalling(Object obj) {
